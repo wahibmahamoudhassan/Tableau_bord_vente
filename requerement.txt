@@ -11,3 +11,4 @@ scikit-learn==0.24.2
 nltk==3.6.5
 wordcloud==1.8.1
 unidecode==0.1.2
+
