@@ -1,4 +1,3 @@
-
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -20,7 +19,6 @@ import string
 import nltk
 from nltk.corpus import stopwords
 from collections import Counter
-from wordcloud import WordCloud
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
@@ -47,7 +45,7 @@ def project_context():
         st.image("logo_data.jpg", width=250)
     with col3:
         st.image("Tableau_bord.png", width=310)
-    
+
     st.markdown("""
     Cette application vise à analyser un jeu de données de vente, à prétraiter les données, à créer un dashboard de vente,
     à effectuer du text mining et à appliquer des techniques de machine learning pour la régression.
@@ -687,7 +685,6 @@ def text_mining():
         plt.title('Nuage de mots des 15 mots les plus fréquents')
         st.pyplot(plt)
 
-
 def machine_learning():
     st.title("Machine Learning")
     st.header("Régression linéaire pour prédire le chiffre d'affaires ou le bénéfice")
@@ -780,12 +777,6 @@ def machine_learning():
             month_data_encoded = month_data_encoded.reindex(columns=X.columns, fill_value=0)
             prediction = model.predict(month_data_encoded)
             predictions.append(prediction[0])
-
-        # Ajout de la courbe des prédictions
-        fig = go.Figure()
-        fig.add_trace(go.Scatter(x=months, y=predictions, mode='lines', name='Prediction', line=dict(color='blue', width=2)))
-        fig.update_layout(title='Prédiction en fonction des mois', xaxis_title='Mois', yaxis_title=target)
-        st.plotly_chart(fig)
 
     else:
         st.warning("Veuillez d'abord prétraiter les données dans la section 'Étude du jeu de données'.")
