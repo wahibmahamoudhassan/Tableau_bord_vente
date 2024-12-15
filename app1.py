@@ -62,7 +62,7 @@ def project_context():
         st.markdown("""
                     - Wahib MAHMOUD HASSAN
                     - Abdourahman KARIEH DINI
-                    - Mamoudou Kourdiou  DIALLO
+                    - Kourdiou  DIALLO
                     """)
 
 # Fonction pour la page d'étude du jeu de données
