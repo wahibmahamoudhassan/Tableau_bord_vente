@@ -48,7 +48,7 @@ def project_context():
     # Centrer l'image avec st.image()
     col1, col2, col3 = st.columns([1,1,1])
     with col1:
-         st.image("logo_Sorbonne.jpeg", width=250)
+         st.image("logo_Sorbonne.jpeg", width=310)
     with col2:
         st.image("logo_data.jpg", width=250)
     with col3:
